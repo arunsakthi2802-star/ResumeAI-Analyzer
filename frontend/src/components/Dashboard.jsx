@@ -31,7 +31,7 @@ export default function Dashboard() {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/analyze', formData, {
+      const response = await axios.post('/api/analyze', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setResult(response.data.analysis);
